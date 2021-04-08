@@ -10,6 +10,5 @@ https://drive.google.com/file/d/1-s5vcFtmpL0_925vakVKRfBAmd9BSkoA/view
 ![image](https://user-images.githubusercontent.com/37068938/113997735-b835a700-9858-11eb-9754-ab755f53f47a.png)
 
 #### After uploading the data, the program shows a DBH-Height scatterplot. In this  chart “plot_id” a small hover box shows a combination of “cluster” and “plot” codes. 
-![image](https://user-images.githubusercontent.com/37068938/113998936-d3ed7d00-9859-11eb-97fd-1a5fc1c33e33.png)
-
+![image](https://user-images.githubusercontent.com/37068938/114035477-6bb19200-987f-11eb-9c51-4d3dbd4f51c7.png)
 
