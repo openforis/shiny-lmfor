@@ -75,7 +75,8 @@ ui <- function(request) {
   
   
   header <- dashboardHeader(
-     title = "Tree DBH-Height Modelling Tool (v. 1.0)",
+  
+     title = "Tree DBH-Height Modelling Tool ",
      titleWidth = 450
   )
   
