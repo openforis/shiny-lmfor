@@ -1,4 +1,7 @@
 # Shiny-lmfor
+The purpose on this tool is to provide an easy application for estimating relationship between tree breast height diameter (DBH) and top height by using ‘lmfor’ R-package. 
+The package provides 20 different tree height models.
+
 
 #### Tree DBH-Height Modelling Tool Technical guide.
 https://drive.google.com/file/d/1-s5vcFtmpL0_925vakVKRfBAmd9BSkoA/view
