@@ -1,4 +1,4 @@
-Module_name
+shiny-lmfor
 ===========
 
 .. warning::
@@ -7,4 +7,4 @@ Module_name
 
 .. tip::
 
-    Nous vous invitons à ouvrir une issue sur leur repository : https://github.com/12rambau/sepal_ui_template/issues/new
+    Nous vous invitons à ouvrir une issue sur leur repository : https://github.com/openforis/shiny-lmfor/issues/new
