@@ -7,8 +7,8 @@
 # Reads input data from CSV file that contains 3-4 columns: 
 # cluster, plot, tree_dbh, tree_height
 #
-# Edited: 16.4.2020
-# -added plotly 
+# Edited: 15.4.2021
+# -added updated manual 
 #******************************************************
 
  
@@ -308,7 +308,7 @@ server = function(input, output, session) {
   })  
   
   output$html_link2 <- renderUI({
-    a("A short User's Guide is here", href="https://drive.google.com/file/d/1-s5vcFtmpL0_925vakVKRfBAmd9BSkoA/view?usp=sharing", target="_blank") 
+    a("A short User's Guide is here", href="https://drive.google.com/file/d/1f9FvW-F8bVL_Fx9jbvVK6Luumj_Ff4Tg/view?usp=sharing", target="_blank") 
   })  
   
   output$html_link3 <- renderUI({
