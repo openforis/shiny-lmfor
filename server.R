@@ -308,7 +308,7 @@ server = function(input, output, session) {
   })  
   
   output$html_link2 <- renderUI({
-    a("A short User's Guide is here", href="https://drive.google.com/file/d/1f9FvW-F8bVL_Fx9jbvVK6Luumj_Ff4Tg/view?usp=sharing", target="_blank") 
+    a("A short User's Guide is here", href="https://drive.google.com/file/d/1f9FvW-F8bVL_Fx9jbvVK6Luumj_Ff4Tg/view", target="_blank") 
   })  
   
   output$html_link3 <- renderUI({
