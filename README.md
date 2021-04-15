@@ -4,7 +4,7 @@ This package provides 20 different tree height models.
 
 
 #### Tree DBH-Height Modelling Tool Technical guide.
-https://drive.google.com/file/d/1-s5vcFtmpL0_925vakVKRfBAmd9BSkoA/view
+https://drive.google.com/file/d/1f9FvW-F8bVL_Fx9jbvVK6Luumj_Ff4Tg/view
 
 #### The use of the tools requires that there are some sample plot data available for the estimation. Each sample plot should preferably contain at least one height sample tree.  
 ![image](https://user-images.githubusercontent.com/37068938/113997441-70af1b00-9858-11eb-9f3a-794ad0c3b80b.png)
