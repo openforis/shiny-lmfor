@@ -23,13 +23,10 @@ library('png')
 library('DT')
 library('skimr')     # summary statistics (see e.g. https://dabblingwithdata.wordpress.com/2018/01/02/my-favourite-r-package-for-summarising-data/)
 
+Resultfolder <- paste0(normalizePath("~/module_results/lmfor"),"/")
 
+dir.create(Resultfolder, showWarnings = FALSE, recursive = TRUE)
 
-if (!file.exists(".//www")){
-  dir.create(file.path('.', 'www'), showWarnings = FALSE)
-}
-
-Resultfolder <- "./www/"
 source("Estimate height.R")
 
 DF_Model = data.frame(
