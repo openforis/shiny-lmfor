@@ -84,16 +84,16 @@ Run_estimation <- function(tree2, model_name, model_index, model_no, Resultfolde
         model_iterations[2] <- "0" }
       
       # 3. fixed part of the model only for the whole data
-      print("im3")
+#      print("im3")
       im3 <- try(ImputeHeights(tree2$tree_dbh, tree2$H,tree2$temp, modelName = model_name, 
                  level=0, makeplot = TRUE, bh=1.3), silent = TRUE)
-      print(paste0("eka-ajo:", str(im3)))
+#      print(paste0("eka-ajo:", str(im3)))
       
 # *************
       if ( class(im3)=="try-error") {
         st <- c(a=mean(tree2$tree_dbh), b = 1/sd(tree2$tree_dbh), c = 1)
 
-        print("im3, toka-ajo:")
+#        print("im3, toka-ajo:")
         im3 <- try(ImputeHeights(tree2$tree_dbh, tree2$H2, tree2$temp, modelName = model_name, 
                    level=0, makeplot = TRUE, 
                    start=st, bh=1.3, control=list(maxIter=100, msMaxIter = 1e6, msVerbose = FALSE), varf = FALSE), silent = TRUE)
