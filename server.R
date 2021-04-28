@@ -2,26 +2,23 @@
 #******************************************************
 # Tree DBH-Height Modelling Tool
 # (c) Lauri Vesa, FAO
-# version 09th April 2020
+# version 28th April 2020
 #
 # Reads input data from CSV file that contains 3-4 columns: 
 # cluster, plot, tree_dbh, tree_height
 #
-# Edited: 15.4.2021
-# -added updated manual 
 #******************************************************
 
-
-library('tidyr')
-library('dplyr')
+library('skimr')     # summary statistics (see e.g. https://dabblingwithdata.wordpress.com/2018/01/02/my-favourite-r-package-for-summarising-data/)
+# library('tidyr') # included in skimr
+library('dplyr') # included in skimr
 library('lmfor')
 #library('ggplot2') # included in plotly
 library('gridExtra')
 library('grid') # rasterGrob
-library('stringr')
+#library('stringr') # included in skimr
 library('png')
 library('DT')
-library('skimr')     # summary statistics (see e.g. https://dabblingwithdata.wordpress.com/2018/01/02/my-favourite-r-package-for-summarising-data/)
 
 Resultfolder <- paste0(normalizePath("~/module_results/lmfor"),"/")
 
@@ -64,7 +61,7 @@ get_colors <- function(tree2, var_name) {
   names(join_cols) <- var_name
   
   tree2 <- tree2 %>% 
-    left_join(cl, by= join_cols ) 
+    dplyr::left_join(cl, by= join_cols ) 
   
   return(tree2)
 }
@@ -173,8 +170,8 @@ tree_plots <- function( tree, model_list, theta, Max_values )
       if (19 == j) lines(d, HDratkowsky( d, a= theta[[i]][1], b=theta[[i]][2], c=theta[[i]][3]), col=plot_colors[i], lwd=2)
       if (20 == j) lines(d, HDhossfeldIV(d, a= theta[[i]][1], b=theta[[i]][2], c=theta[[i]][3]), col=plot_colors[i], lwd=2)
       
-      tr[i] <- ifelse(j < 12, paste(str_to_title(model_names[j]), "(a=", round(theta[[i]][1],6),", b=", round(theta[[i]][2],6),")"),
-                      paste(str_to_title(model_names[j]), "(a=", round(theta[[i]][1],6),", b=", round(theta[[i]][2],6), " c=", round(theta[[i]][3],6),")"))
+      tr[i] <- ifelse(j < 12, paste(stringr::str_to_title(model_names[j]), "(a=", round(theta[[i]][1],6),", b=", round(theta[[i]][2],6),")"),
+                      paste(stringr::str_to_title(model_names[j]), "(a=", round(theta[[i]][1],6),", b=", round(theta[[i]][2],6), " c=", round(theta[[i]][3],6),")"))
     } else {
       tr[i] <- " "
     }
@@ -256,7 +253,7 @@ server = function(input, output, session) {
     
     a1$plot    <- as.character(a1$plot)
     
-    output$contents <- renderDataTable({
+    output$contents <- DT::renderDataTable({
       M <- DT::datatable(data_analysis, options = list(scrollX = TRUE))
       M
     })
@@ -277,7 +274,7 @@ server = function(input, output, session) {
     max_n <- nrow(data_analysis)
     #  print(paste("N: ", max_n))
     
-    output$contents <- renderDataTable({
+    output$contents <- DT::renderDataTable({
       M <- DT::datatable(data_analysis, options = list(scrollX = TRUE))
       M
     })

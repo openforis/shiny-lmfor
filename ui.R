@@ -75,8 +75,7 @@ ui <- function(request) {
   
   
   header <- dashboardHeader(
-  
-     title = "Tree DBH-Height Modelling Tool ",
+     title = "Tree DBH-Height Modelling Tool (v. 1.0)",
      titleWidth = 450
   )
   
@@ -141,7 +140,7 @@ ui <- function(request) {
                       selectInput("sel_nrap", "Random parameters", 
                         choices= c("0", "1", "2", "3"), selected="3")),
                    column(6,
-                      checkboxInput("check_variance", "Variance function used", value = FALSE)),
+                      checkboxInput("check_variance", "Variance function used", value = TRUE)),
                 ),
                 fluidRow(
                   column(6,
